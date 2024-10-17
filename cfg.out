@@ -1,0 +1,59 @@
+# Control Flow Graph
+func_entry
+{
+name: func
+ret_type: int
+args: int x
+}
+Predecessors:  - , 
+Successors: Func_B0, 
+
+Func_B0
+{
+int n,s=0;
+if(x<0)
+}
+Predecessors: func_entry, 
+Successors: Func_B1, Func_B2, 
+
+Func_B1
+{
+n=0;
+}
+Predecessors: Func_B0, 
+Successors: Func_B3, 
+
+Func_B2
+{
+n=1;
+}
+Predecessors: Func_B0, 
+Successors: Func_B3, 
+
+Func_B3
+{
+while ( n<10 )
+}
+Predecessors: Func_B1, Func_B2, Func_B4, 
+Successors: Func_B4, Func_B5, 
+
+Func_B4
+{
+s=s+n;
+n=n+1;
+}
+Predecessors: Func_B3, 
+Successors: Func_B3, 
+
+Func_B5
+{
+return s
+}
+Predecessors: Func_B3, 
+Successors: Func_exit, 
+
+Func_exit
+{
+}
+Predecessors: Func_B5
+Successors: - 

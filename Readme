@@ -1,0 +1,13 @@
+## how to compile and make cfg
+
+```bash
+make
+```
+
+- You can make parser , control-flow analyzer and cfg.out at once.
+
+```bash
+make cfa
+```
+
+- You can make only cfa.out if you enter 'make cfa' on your prompt.
